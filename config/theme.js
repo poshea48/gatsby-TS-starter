@@ -60,10 +60,11 @@ export const theme = {
   gradient,
   shadow,
   breakpoints: {
-    xs: '400px',
-    s: '600px',
-    m: '900px',
-    l: '1200px',
+    xs: '320px',
+    s: '480px',
+    m: '768px',
+    l: '992px',
+    xl: '1200px',
   },
   fontFamily: {
     // eslint-disable-next-line
