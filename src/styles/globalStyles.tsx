@@ -20,6 +20,7 @@ const globalStyles = () => css`
   }
   html,
   body {
+    position: relative;
     width: 100vw;
     min-height: 100vh;
     min-height: -webkit-fill-available;
@@ -28,12 +29,8 @@ const globalStyles = () => css`
     font-family: system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial,
       sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji';
   }
-  #page-container {
-    padding: 0 1em;
-    min-height: calc(var(--vh, 1vh) * 100);
-    @media screen and (max-width: 600px) {
-      padding: 0 0.5em;
-    }
+  html {
+    height: -webkit-fill-available;
   }
   article,
   aside,
@@ -67,11 +64,19 @@ const globalStyles = () => css`
     display: none;
   }
   a {
-    transition: color 0.5s;
+    transition: all 0.3s ease-in-out;
     text-decoration: none;
   }
   a:hover {
     text-decoration: none;
+    transform: scale(1.05);
+  }
+  button {
+    cursor: pointer;
+    border-style: none;
+    &:disabled {
+      cursor: not-allowed;
+    }
   }
   hgroup,
   h1,
@@ -79,13 +84,15 @@ const globalStyles = () => css`
   h3,
   h4,
   h5,
-  h6 {
+  h6,
+  p {
     margin: 0;
   }
 
   select,
   input {
     font-size: 16px;
+    border: 1px solid gray;
   }
   ul {
     margin: 0;

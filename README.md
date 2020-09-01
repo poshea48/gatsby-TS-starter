@@ -7,7 +7,7 @@
 ## 🚀 Quick start
 
 1.  **clone repo**
-2.  **npm install**
+2.  **yarn install**
 3.  **My addons from Gatsby starter**
     Emotion => styled components
     Global ThemeProvider

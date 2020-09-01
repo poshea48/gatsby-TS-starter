@@ -1,9 +1,9 @@
 import React from 'react';
-import MainLayout from './src/components/layout/MainLayout';
+import GlobalLayout from './src/components/layout/GlobalLayout';
 import PropTypes from 'prop-types';
 
 export const wrapPageElement = ({ element, props }) => {
-  return <MainLayout {...props}>{element}</MainLayout>;
+  return <GlobalLayout {...props}>{element}</GlobalLayout>;
 };
 
 wrapPageElement.propTypes = {
