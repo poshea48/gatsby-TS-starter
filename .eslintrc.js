@@ -28,6 +28,8 @@ module.exports = {
   rules: {
     'react/prop-types': 'off',
     '@typescript-eslint/explicit-function-return-type': 'off',
+    '@typescript-eslint/ban-ts-comment': 'off',
+    'jsx-a11y/no-onchange': 0,
     strict: 0,
     'no-console': 'warn',
     quotes: ['warn', 'single'],
