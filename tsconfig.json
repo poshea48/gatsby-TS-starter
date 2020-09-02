@@ -1,16 +1,25 @@
 {
   "compilerOptions": {
+    "allowJs": true,
     "rootDir": "src",
     "outDir": "build",
     "module": "commonjs",
-    "target": "esnext",
+    "target": "es6",
     "jsx": "react", // default was preserve
-    "lib": ["dom", "esnext"],
+    "lib": ["dom", "es6"],
     "strict": true,
     "noEmit": true,
     "isolatedModules": true,
     "esModuleInterop": true,
-    "noUnusedLocals": false
+    "noUnusedLocals": false,
+    "baseUrl": "src",
+    "paths": {
+      "test-utils": ["./utils/test-utils"]
+    },
+    "types": ["node", "jest", "@testing-library/jest-dom"],
+    "typeRoots": ["./src/types", "node_modules/@types"]
+    // "noImplicitAny": false
   },
-  "exclude": ["node_modules", "public", ".cache"]
+  "include": ["src/**/*"],
+  "exclude": ["node_modules", "public", ".cache", "jest"]
 }
