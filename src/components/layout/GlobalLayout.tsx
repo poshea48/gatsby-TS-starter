@@ -25,6 +25,7 @@ const GlobalLayout: FunctionComponent = ({ children }) => {
           a {
             color: ${theme.colors.black.blue};
           }
+
           input {
             border: 1px solid rgba(23, 39, 46, 0.4);
           }

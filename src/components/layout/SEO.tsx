@@ -27,7 +27,6 @@ const SEO: React.FC<SEOProps> = props => {
             title
             description
             author
-            keywords
           }
         }
       }
