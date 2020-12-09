@@ -12,7 +12,7 @@ module.exports = {
       resolve: 'gatsby-source-filesystem',
       options: {
         name: 'images',
-        path: 'src/images',
+        path: './src/images',
       },
     },
     'gatsby-transformer-sharp',
@@ -35,7 +35,7 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-emotion',
       options: {
-        autoLabel: process.env.NODE_ENV !== 'production',
+        autoLabel: 'dev-only',
         // eslint-disable-next-line
         labelFormat: `[filename]--[local]`,
       },
@@ -57,6 +57,7 @@ module.exports = {
         backgroundColor: config.backgroundColor,
         themeColor: config.themeColor,
         display: 'standalone',
+        icon: 'src/images/gatsby-astronaut.png',
       },
     },
     'gatsby-plugin-offline',

@@ -1,6 +1,5 @@
 import React, { FunctionComponent } from 'react';
-import { ThemeProvider } from 'emotion-theming';
-import { Global, css } from '@emotion/core';
+import { Global, css, ThemeProvider } from '@emotion/react';
 import { useStaticQuery, graphql } from 'gatsby';
 import globalStyles from '../../styles/globalStyles';
 import theme from '../../styles/theme';

@@ -1,9 +1,11 @@
 import { RouteComponentProps } from '@reach/router';
 import React from 'react';
 
-const RouterPage: React.FC<{
-  Component: (routerProps: RouteComponentProps) => JSX.Element;
-} & RouteComponentProps> = ({ Component, ...routerProps }) => {
+const RouterPage: React.FC<
+  {
+    Component: (routerProps: RouteComponentProps) => JSX.Element;
+  } & RouteComponentProps
+> = ({ Component, ...routerProps }) => {
   return <>{Component(routerProps)}</>;
 };
 

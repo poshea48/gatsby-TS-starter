@@ -4,19 +4,24 @@ type UserType = {
   id: number;
   name: string;
 };
+type PayloadType = {
+  user?: UserType;
+};
+
 type ActionType = {
   type: string;
-  payload: object;
+  payload: PayloadType;
 };
+
 type StateType = {
-  user: object;
+  user: UserType;
   authenticated: boolean;
 };
 type DispatchType = (action: ActionType) => void;
 type AppProviderProps = { children: React.ReactNode };
 
 const initialState = {
-  user: {},
+  user: {} as UserType,
   authenticated: false,
 };
 
@@ -77,10 +82,3 @@ function useAppDispatch() {
 }
 
 export { AppProvider, useAppState, useAppDispatch };
-
-// const AppContext = createContext<[string, (app: string) => void]>([
-//   'green',
-//   () => {},
-// ]);
-
-// export default AppContext;

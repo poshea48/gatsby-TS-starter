@@ -19,7 +19,7 @@ module.exports = {
     es6: true,
     jest: true,
   },
-  plugins: ['@typescript-eslint', 'jsx-a11y'],
+  plugins: ['@typescript-eslint', 'jsx-a11y', '@emotion'],
   parserOptions: {
     ecmaFeatures: { jsx: true },
     ecmaVersion: 2018,
@@ -43,7 +43,10 @@ module.exports = {
       },
     ],
     'prettier/prettier': 'error',
+    '@emotion/jsx-import': 'error',
+    '@emotion/pkg-renaming': 'error',
   },
+
   overrides: [
     {
       files: ['*.js'],

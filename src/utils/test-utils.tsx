@@ -1,6 +1,6 @@
 import React, { ReactElement } from 'react';
 import { render, RenderResult } from '@testing-library/react';
-import { ThemeProvider } from 'emotion-theming';
+import { ThemeProvider } from '@emotion/react';
 import { AppProvider } from '../context/appContext';
 import theme from '../styles/theme';
 
