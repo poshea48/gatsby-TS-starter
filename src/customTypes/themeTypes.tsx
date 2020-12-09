@@ -1,4 +1,4 @@
-import styled, { CreateStyled } from '@emotion/styled';
+import '@emotion/react';
 
 type ThemeObjectType = {
   [key: string]: string;
@@ -31,15 +31,15 @@ type BorderRadiusType = {
   round: string;
 };
 
-export interface ThemeType {
-  colors: ColorsType;
-  breakpoints: BreakPointsType;
-  fontFamily: FontFamilyType;
-  borderRadius: BorderRadiusType;
-  transitions: {
-    default: TransitionType;
-    boom: TransitionType;
-  };
+declare module '@emotion/react' {
+  export interface Theme {
+    colors: ColorsType;
+    breakpoints: BreakPointsType;
+    fontFamily: FontFamilyType;
+    borderRadius: BorderRadiusType;
+    transitions: {
+      default: TransitionType;
+      boom: TransitionType;
+    };
+  }
 }
-
-export default styled as CreateStyled<ThemeType>;

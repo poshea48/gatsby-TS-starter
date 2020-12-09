@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, FunctionComponent } from 'react';
 import { createPortal } from 'react-dom';
-import styled from '../styles/customStyled';
+import styled from '@emotion/styled';
 
 // set z-index to 100 to cover everything
 // NavMenus and Auth forms will be set to 105

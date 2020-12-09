@@ -18,7 +18,7 @@ type SEOProps = {
   image?: string;
 };
 
-const SEO: React.FC<SEOProps> = props => {
+const SEO: React.FC<SEOProps> = (props) => {
   const { site } = useStaticQuery(
     graphql`
       query {

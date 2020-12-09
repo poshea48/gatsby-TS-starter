@@ -1,6 +1,8 @@
+/** @jsx jsx */
+import { jsx } from '@emotion/react';
 import React, { PropsWithChildren } from 'react';
 import { Link } from 'gatsby';
-import { css } from '@emotion/core';
+import { css } from '@emotion/react';
 
 const styles = css`
   .routeSkipHeading {
@@ -23,10 +25,12 @@ const styles = css`
   }
 `;
 
-const SkipLinkHeading: React.FC<PropsWithChildren<{
-  level: number;
-  targetID: string;
-}>> = ({ level = 1, targetID, children }) => {
+const SkipLinkHeading: React.FC<
+  PropsWithChildren<{
+    level: number;
+    targetID: string;
+  }>
+> = ({ level = 1, targetID, children }) => {
   const Heading =
     level > 0 && level < 7
       ? (`h${level}` as 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6')
